@@ -1,0 +1,29 @@
+title: "2025 GSEMOR Denovo Assembly Tutorial"
+description: "Tutorial for the GSEMOR Workshop"
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+baseurl: "/2025_GSEMOR_Denovo_Assembly" 
+url: "https://taylorpaisie.github.io"
+
+search_enabled: true
+nav_sort: case_insensitive
+
+aux_links:
+  "View on GitHub":
+    - "https://github.com/taylorpaisie/2025_GSEMOR_Denovo_Assembly"
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# 👇 THIS IS THE KEY LINE
+include:
+  - images
+
