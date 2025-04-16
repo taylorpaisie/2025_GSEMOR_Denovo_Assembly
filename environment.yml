@@ -1,0 +1,21 @@
+name: denovo_assembly
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - fastqc
+  - trimmomatic
+  - bwa
+  - samtools
+  - bcftools
+  - quast
+  - spades
+  - pilon
+  - prokka
+  - artemis
+  
