@@ -26,7 +26,7 @@ This guide will walk you through the process of identifying genetic variants fro
 
 ## 🛠 Gitpod link for Tutorial
 
-[![Open with Gitpod](https://img.shields.io/badge/Open%20with-Gitpod-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/taylorpaisie/2025_GSEMOR_Variant_Calling)
+[![Open with Gitpod](https://img.shields.io/badge/Open%20with-Gitpod-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/taylorpaisie/2025_GSEMOR_Denovo_Assembly)
 
 Happy Assembling! 🧬✨
 
