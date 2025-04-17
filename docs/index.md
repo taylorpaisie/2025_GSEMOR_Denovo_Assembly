@@ -19,7 +19,7 @@ This guide will walk you through the process of De novo assembly from raw, paire
 4. [Comparing the scaffolds to other known genomes](./_pages/step4.md)
 5. [Filling the gaps](./_pages/step5.md)
 6. [Annotation of the assembled genome](./_pages/step6.md)
-7. [Automating a Variant Calling Workflow](./_pages/step7.md)
+7. [Visualize genome annotation](./_pages/step7.md)
 
 
 ---
@@ -29,4 +29,9 @@ This guide will walk you through the process of De novo assembly from raw, paire
 [![Open with Gitpod](https://img.shields.io/badge/Open%20with-Gitpod-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/taylorpaisie/2025_GSEMOR_Denovo_Assembly)
 
 Happy Assembling! 🧬✨
+
+## Made and maintained by Taylor K. Paisie
+### CDC - Bacterial Special Pathogens Branch (BSPB)
+### Email:  tpaisie91@gmail.com
+### `https://taylorpaisie.github.io/2025_GSEMOR_Denovo_Assembly/`
 
