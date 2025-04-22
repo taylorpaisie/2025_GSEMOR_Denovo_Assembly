@@ -124,4 +124,4 @@ X                 1              55
 
 ---
 
-👉 Ready? Continue to [Step 2 - Assessing Read Quality]({{ "/step2/" | relative_url }})
+👉 Ready? Continue to [Step 2 - Assessing Read Quality and Trimming]({{ "/step2/" | relative_url }})

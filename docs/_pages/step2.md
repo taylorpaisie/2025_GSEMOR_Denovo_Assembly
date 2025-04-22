@@ -53,3 +53,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Change to the `trimmed_fastq` directory:  
 `$ cd ../trimmed_fastq` 
+
+---
+
+👉 Ready? Continue to [Step 3 - Sequence Assembly]({{ "/step3/" | relative_url }})

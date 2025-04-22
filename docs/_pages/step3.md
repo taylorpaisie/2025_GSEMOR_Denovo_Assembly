@@ -55,3 +55,7 @@ permalink: /step3/
 `$ cd ~/denovo_assembly/results/scaffolds`    
 
 #### We now want to be at the `denovo_assembly` directory
+
+---
+
+👉 Ready? Continue to [Step 4 - Comparing the scaffolds to other known genomes]({{ "/step4/" | relative_url }})

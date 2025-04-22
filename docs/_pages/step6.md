@@ -47,3 +47,7 @@ permalink: /step6/
  
 
 `$ prokka --outdir results/annotation/prokka_output --kingdom Viruses --proteins results/annotation/NC_031063.1.faa results/scaffolds/169_improved.fasta`  
+
+---
+
+👉 Ready? Continue to [Step 7 - Visualize genome annotation]({{ "/step7/" | relative_url }})

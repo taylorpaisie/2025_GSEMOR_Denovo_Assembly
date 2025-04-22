@@ -42,7 +42,7 @@ permalink: /step5/
 
 
 <figure>
-    <img src="images/IGV_pic1.png" width="2000" height="400">
+    <img src="../images/IGV_pic1.png" width="2000" height="400">
     <figcaption>IGV visualization of our genome assembly</figcaption>
 </figure>
 
@@ -74,6 +74,10 @@ permalink: /step5/
 
 
 <figure>
-    <img src="images/editing_fasta.png" width="1000">
+    <img src="../images/editing_fasta.png" width="1000">
     <figcaption>How to edit the improved fasta file (output from pilon)</figcaption>
 </figure>
+
+---
+
+👉 Ready? Continue to [Step 6 - Annotation of the assembled genome]({{ "/step6/" | relative_url }})

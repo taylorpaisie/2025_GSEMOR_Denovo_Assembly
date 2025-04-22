@@ -12,7 +12,7 @@ permalink: /step4/
 #### We will know take our scaffolds and use [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) to compare our newly assembled genome to other genomes  
 
 <figure>
-    <img src="images/blast_results.png" width="1000">
+    <img src="../images/blast_results.png" width="1000">
     <figcaption>BLAST results from our scaffolds</figcaption>
 </figure>
 
@@ -20,3 +20,7 @@ permalink: /step4/
 #### The closest is Pseudomonas phage CMS1, complete genome (OM937766.1), with coverage of 99% and identity of 98.53%   
 #### Examination of the GenBank record for OM937766 finds that organism is "Pseudomonas phage CMS1" and the taxon ID is 2926659  
 #### Another closely related genome is RefSeq NC_031063.1, Pseudomonas phage PEV2  
+
+---
+
+👉 Ready? Continue to [Step 5 - Filling the gaps]({{ "/step5/" | relative_url }})
