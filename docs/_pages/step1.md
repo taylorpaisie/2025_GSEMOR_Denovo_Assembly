@@ -120,4 +120,8 @@ X                 1              55
 
 #### Making directories for lesson:
 
-`$ mkdir -p ~/denovo_assembly/data/untrimmed_fastq ~/denovo_assembly/data/trimmed_fastq`     
+`$ mkdir -p ~/denovo_assembly/data/untrimmed_fastq ~/denovo_assembly/data/trimmed_fastq`  
+
+---
+
+👉 Ready? Continue to [Step 2 - Assessing Read Quality]({{ "/step2/" | relative_url }})
