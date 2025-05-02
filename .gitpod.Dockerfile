@@ -12,22 +12,26 @@
 
 FROM mambaorg/micromamba:latest
 
-# Set up shell for Gitpod and Conda
+# Set up shell and env
 ENV SHELL=/bin/bash \
     MAMBA_ROOT_PREFIX=/opt/conda \
     PATH=/opt/conda/bin:$PATH
 
+# Install git and other basics
+RUN apt-get update && apt-get install -y git curl wget build-essential && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
 # Set working directory
 WORKDIR /workspace
 
-# Copy the environment file into the image
+# Copy Conda env file
 COPY environment.yml /tmp/environment.yml
 
-# Create the environment during image build
+# Create Conda env
 RUN micromamba create -y -n denovo_assembly -f /tmp/environment.yml && \
     echo "micromamba activate denovo_assembly" >> ~/.bashrc && \
     micromamba clean --all --yes
 
-# Default to bash
+# Default shell
 SHELL ["/bin/bash", "-c"]
 
