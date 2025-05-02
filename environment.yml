@@ -19,9 +19,6 @@ dependencies:
   - prokka
   - artemis
 
-tasks:
-  - name: Setup Conda Env
-    init: conda env create -f environment.yml || conda env update -f environment.yml
-    command: conda activate denovo_assembly
+
 
   
