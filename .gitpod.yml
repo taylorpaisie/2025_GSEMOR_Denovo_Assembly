@@ -1,34 +1,52 @@
+# image:
+#   file: .gitpod.Dockerfile
+
+# tasks:
+#   - name: Setup and Activate Conda Environment
+#     init: |
+#       if [ ! -d "$HOME/miniconda" ]; then
+#         echo "Installing Miniconda..."
+#         wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+#         bash miniconda.sh -b -p $HOME/miniconda
+#         rm miniconda.sh
+#         echo "export PATH=$HOME/miniconda/bin:\$PATH" >> ~/.bashrc
+#         source ~/.bashrc
+#         conda config --set auto_activate_base false
+#         conda init bash
+#       else
+#         echo "Miniconda already installed"
+#         source ~/.bashrc
+#       fi
+#       conda env create -f environment.yml -n denovo_assembly || conda env update -f environment.yml
+#     command: |
+#       source ~/.bashrc
+#       conda activate denovo_assembly
+#       echo "Conda environment activated!"
+
+# vscode:
+#   extensions:
+#     - ms-python.python
+#     - ms-toolsai.jupyter
+
 image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: Setup and Activate Conda Environment
-    init: |
-      if [ ! -d "$HOME/miniconda" ]; then
-        echo "Installing Miniconda..."
-        wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-        bash miniconda.sh -b -p $HOME/miniconda
-        rm miniconda.sh
-        echo "export PATH=$HOME/miniconda/bin:\$PATH" >> ~/.bashrc
-        source ~/.bashrc
-        conda config --set auto_activate_base false
-        conda init bash
-      else
-        echo "Miniconda already installed"
-        source ~/.bashrc
-      fi
-      conda env create -f environment.yml -n denovo_assembly || conda env update -f environment.yml
+  - name: Launch
     command: |
-      source ~/.bashrc
-      conda activate denovo_assembly
-      echo "Conda environment activated!"
+      echo "Conda environment auto-activated. You are now in 'denovo_assembly'."
 
 vscode:
   extensions:
     - ms-python.python
     - ms-toolsai.jupyter
 
-
 ports:
   - port: 8888
     onOpen: open-preview
+
+
+
+# ports:
+#   - port: 8888
+#     onOpen: open-preview
