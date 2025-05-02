@@ -59,6 +59,11 @@ trimmomatic PE \
     <figcaption>FastQC graph output for trimmed reverse reads</figcaption>
 </figure>
 
+   * We can open these html files in our gitpod environment by running:  
+   `$ python3 -m http.server 8080`
+   
+   * Then selecting "Open Preview" and a directory listing for the files will come up
+
 #### Move trimmed fastq files to the trimmed fastq directory:  
 `$ mv *trim* ../trimmed_fastq`  
 
