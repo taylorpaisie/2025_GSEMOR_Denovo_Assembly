@@ -18,4 +18,10 @@ dependencies:
   - pilon
   - prokka
   - artemis
+
+tasks:
+  - name: Setup Conda Env
+    init: conda env create -f environment.yml || conda env update -f environment.yml
+    command: conda activate your-env-name
+
   
