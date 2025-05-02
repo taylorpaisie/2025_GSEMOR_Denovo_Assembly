@@ -23,7 +23,13 @@ permalink: /step5/
 `$ bwa index results/scaffolds/scaffolds.fasta`  
 
 #### Run BWA-MEM reference mapping with the indexed `scaffolds.fasta` as the reference and the original trimmed fastq files as the reads:  
-`$ bwa mem results/scaffolds/scaffolds.fasta data/trimmed_fastq/169_S7_L001_R1_001.trim.fastq.gz data/trimmed_fastq/169_S7_L001_R2_001.trim.fastq.gz > results/sam/169.aligned.sam`    
+
+```
+bwa mem \
+    results/scaffolds/scaffolds.fasta data/trimmed_fastq/169_S7_L001_R1_001.trim.fastq.gz \
+    data/trimmed_fastq/169_S7_L001_R2_001.trim.fastq.gz \
+    > results/sam/169.aligned.sam
+```
 
 
 #### Convert SAM file to BAM format:  
@@ -59,7 +65,14 @@ permalink: /step5/
 
 #### Pilon outputs a FASTA file containing an improved representation of the genome from the read data  
 
-`$ pilon --genome results/scaffolds/scaffolds.fasta --frags results/bam/169.aligned.sorted.bam --output results/scaffolds/169_improved`  
+```
+pilon \
+    --genome results/scaffolds/scaffolds.fasta \
+    --frags results/bam/169.aligned.sorted.bam \
+    --output results/scaffolds/169_improved
+```
+
+ 
 
 #### This command will give us the file `169_improved.fasta`  
 
