@@ -23,6 +23,10 @@ tasks:
       conda activate denovo_assembly
       echo "Conda environment activated!"
 
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-toolsai.jupyter
 
 
 ports:
