@@ -10,8 +10,21 @@ permalink: /step2/
 
 #### Download the fastq and adapter files in the untrimmed fastq directory:  
 `$ cd ~/denovo_assembly/data/untrimmed_fastq`  
-`$ wget -nv https://figshare.com/ndownloader/files/45571629 -O 169_S7_L001_R1_001.fastq.gz --no-check-certificate`   
-`$ wget -nv https://figshare.com/ndownloader/files/45571626 -O 169_S7_L001_R2_001.fastq.gz --no-check-certificate`  
+
+```
+wget -nv \
+    https://figshare.com/ndownloader/files/45571629 \
+    -O 169_S7_L001_R1_001.fastq.gz \
+    --no-check-certificate
+```
+```
+wget -nv \
+    https://figshare.com/ndownloader/files/45571626 \
+    -O 169_S7_L001_R2_001.fastq.gz \
+    --no-check-certificate
+```
+  
+
 `$ cp /home/gitpod/miniconda/envs/denovo_assembly/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa .` 
 
 
@@ -23,11 +36,11 @@ permalink: /step2/
 #### Now run Trimmomatic on the raw fastq files:  
 
 ```
-$ trimmomatic PE \
-169_S7_L001_R1_001.fastq.gz 169_S7_L001_R2_001.fastq.gz \
-169_S7_L001_R1_001.trim.fastq.gz 169_S7_L001_R1_001un.trim.fastq.gz \
-169_S7_L001_R2_001.trim.fastq.gz 169_S7_L001_R2_001un.trim.fastq.gz \
-SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
+trimmomatic PE \
+    169_S7_L001_R1_001.fastq.gz 169_S7_L001_R2_001.fastq.gz \
+    169_S7_L001_R1_001.trim.fastq.gz 169_S7_L001_R1_001un.trim.fastq.gz \
+    169_S7_L001_R2_001.trim.fastq.gz 169_S7_L001_R2_001un.trim.fastq.gz \
+    SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 ```
 
 #### Run FastQC on newly trimmed fastq files:  
