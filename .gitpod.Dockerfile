@@ -12,14 +12,21 @@
 
 FROM mambaorg/micromamba:latest
 
-# Set up shell and env
+# Set shell and env
 ENV SHELL=/bin/bash \
     MAMBA_ROOT_PREFIX=/opt/conda \
     PATH=/opt/conda/bin:$PATH
 
-# Install git and other basics
-RUN apt-get update && apt-get install -y git curl wget build-essential && \
+# Switch to root to install system packages
+USER root
+
+# Install sudo and core tools
+RUN apt-get update && \
+    apt-get install -y sudo git curl wget build-essential && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Restore to Gitpod user (gitpod)
+USER gitpod
 
 # Set working directory
 WORKDIR /workspace
@@ -27,11 +34,12 @@ WORKDIR /workspace
 # Copy Conda env file
 COPY environment.yml /tmp/environment.yml
 
-# Create Conda env
+# Create Conda environment
 RUN micromamba create -y -n denovo_assembly -f /tmp/environment.yml && \
     echo "micromamba activate denovo_assembly" >> ~/.bashrc && \
     micromamba clean --all --yes
 
-# Default shell
+# Set default shell
 SHELL ["/bin/bash", "-c"]
+
 
