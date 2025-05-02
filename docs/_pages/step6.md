@@ -38,15 +38,27 @@ permalink: /step6/
 #### Running prokka on the improved alignment with our downloaded protein set for annotation:  
 
 `$ mkdir -p results/annotation`  
-`$ wget -nv https://raw.githubusercontent.com/taylorpaisie/VEME_2024_NGS_Denovo_Assembly/main/NC_031063.1.faa -O ~/denovo_assembly/results/annotation/NC_031063.1.faa`  
+
+```
+wget -nv \
+   https://raw.githubusercontent.com/taylorpaisie/VEME_2024_NGS_Denovo_Assembly/main/NC_031063.1.faa \
+   -O ~/denovo_assembly/results/annotation/NC_031063.1.faa
+```
+  
 
 #### For this tutorial we will copy the protein set we will use for annotation  
 
 
 #### Need to activate the Prokka conda environment (we can talk about this later if we have time):  
  
+```
+prokka \
+   --outdir results/annotation/prokka_output \
+   --kingdom Viruses \
+   --proteins results/annotation/NC_031063.1.faa \
+   results/scaffolds/169_improved.fasta
+```
 
-`$ prokka --outdir results/annotation/prokka_output --kingdom Viruses --proteins results/annotation/NC_031063.1.faa results/scaffolds/169_improved.fasta`  
 
 ---
 
